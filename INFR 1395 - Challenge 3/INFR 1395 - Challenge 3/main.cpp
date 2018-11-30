@@ -34,6 +34,7 @@ void ShowConsoleCursor(bool showFlag)
 int main()
 {
 	// CAN YOU READ THIS
+	// CHANGE
 	// maximize window
 	maximizeWindow();
 
