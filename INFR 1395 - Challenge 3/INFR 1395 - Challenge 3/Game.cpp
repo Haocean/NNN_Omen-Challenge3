@@ -687,6 +687,122 @@ void Game::displayMushroomKingdom(int &areaState)
 			areaState = 7;
 			break;
 		}
+		else if (coord_x == 65 && coord_y == 14) {
+			areaState = 10;
+			break;
+		}
+	}
+}
+
+/* Bandits Way */
+bool Game::boundaryBanditsWay(int x, int y)
+{
+	// declare "boundary"
+	bool boundary = false;
+
+	// checks if the coordinate are inside the boundary
+	if (BanditsWay[y][x] != ' ') {
+		boundary = true;
+	}
+
+	// return "boundary"
+	return boundary;
+}
+
+void Game::drawBanditsWay(int x, int y)
+{
+	// display area
+	for (int counterA = 0; counterA < 11; counterA++) {
+		for (int counterB = 0; counterB < 28; counterB++) {
+			if (counterA == y && counterB == x) {
+				std::cout << 'M';
+			}
+			else {
+				std::cout << BanditsWay[counterA][counterB];
+			}
+		}
+		std::cout << std::endl;
+	}
+}
+
+void Game::displayBanditsWay(int &areaState)
+{
+	// declare "coord_x" and "coord_y" to set the party's coordinates
+	int coord_x;
+	int coord_y;
+
+	if (areaState == 10) {
+		coord_x = 1;
+		coord_y = 5;
+	}
+	else {
+		coord_x = 1;
+		coord_y = 5;
+	}
+
+	// clear system
+	system("cls");
+	// draw area
+	drawBanditsWay(coord_x, coord_y);
+
+	bool endArea = false;
+	while (endArea == false) {
+		int input = 0;
+
+		switch (input = getch()) {
+		case KEY_UP:
+			// update
+			if (boundaryBanditsWay(coord_x, coord_y - 1) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_y -= 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		case KEY_DOWN:
+			// update
+			if (boundaryBanditsWay(coord_x, coord_y + 1) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_y += 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		case KEY_LEFT:
+			// update
+			if (boundaryBanditsWay(coord_x - 1, coord_y) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_x -= 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		case KEY_RIGHT:
+			// update
+			if (boundaryBanditsWay(coord_x + 1, coord_y) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_x += 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		}
+		if (coord_x == 0 && coord_y == 5) {
+			areaState = 9;
+			break;
+		}
 	}
 }
 
@@ -725,6 +841,9 @@ void Game::displayGame()
 		case 8:
 		case 9:
 			displayMushroomKingdom(areaState);
+			break;
+		case 10:
+			displayBanditsWay(areaState);
 			break;
 		}
 	}
