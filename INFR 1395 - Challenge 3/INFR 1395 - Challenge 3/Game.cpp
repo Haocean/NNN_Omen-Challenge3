@@ -1,8 +1,8 @@
-#include "Game.h"
-#include <iostream>
-#include <conio.h>
-#include <windows.h>
-#include <string>
+#include"Game.h"
+#include<iostream>
+#include<conio.h>
+#include<windows.h>
+#include<string>
 
 #define KEY_UP 72
 #define KEY_DOWN 80

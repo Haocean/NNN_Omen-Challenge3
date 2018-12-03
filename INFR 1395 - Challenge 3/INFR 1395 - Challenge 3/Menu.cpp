@@ -1,7 +1,7 @@
-#include "Menu.h"
-#include <iostream>
-#include <windows.h>
-#include <stdlib.h>     /* exit, EXIT_FAILURE */
+#include"Menu.h"
+#include<iostream>
+#include<windows.h>
+#include<stdlib.h>     /* exit, EXIT_FAILURE */
 
 void displayMenu()
 {

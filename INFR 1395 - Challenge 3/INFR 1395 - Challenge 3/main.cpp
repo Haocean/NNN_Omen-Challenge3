@@ -1,6 +1,6 @@
-#include "Menu.h"
-#include "Game.h"
-#include <Windows.h>
+#include"Menu.h"
+#include"Game.h"
+#include<Windows.h>
 
 void maximizeWindow()
 {
