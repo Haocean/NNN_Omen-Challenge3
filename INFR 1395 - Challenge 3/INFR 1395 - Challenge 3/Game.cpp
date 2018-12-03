@@ -496,7 +496,7 @@ void Game::displayMushroomWayC(int &areaState)
 		coord_y = 9;
 	}
 	else if (areaState == 7) {
-		coord_x = 44;
+		coord_x = 42;
 		coord_y = 1;
 	}
 	else {
@@ -567,6 +567,126 @@ void Game::displayMushroomWayC(int &areaState)
 			areaState = 5;
 			break;
 		}
+		else if (coord_x > 40 && coord_x < 44 && coord_y == 0) {
+			areaState = 8;
+			break;
+		}
+	}
+}
+
+/* Mushroom Kingdom */
+bool Game::boundaryMushroomKingdom(int x, int y)
+{
+	// declare "boundary"
+	bool boundary = false;
+
+	// checks if the coordinate are inside the boundary
+	if (MushroomKingdom[y][x] != ' ') {
+		boundary = true;
+	}
+
+	// return "boundary"
+	return boundary;
+}
+
+void Game::drawMushroomKingdom(int x, int y)
+{
+	// display area
+	for (int counterA = 0; counterA < 27; counterA++) {
+		for (int counterB = 0; counterB < 66; counterB++) {
+			if (counterA == y && counterB == x) {
+				std::cout << 'M';
+			}
+			else {
+				std::cout << MushroomKingdom[counterA][counterB];
+			}
+		}
+		std::cout << std::endl;
+	}
+}
+
+void Game::displayMushroomKingdom(int &areaState)
+{
+	// declare "coord_x" and "coord_y" to set the party's coordinates
+	int coord_x;
+	int coord_y;
+
+	if (areaState == 8) {
+		coord_x = 12;
+		coord_y = 25;
+	}
+	else if (areaState == 9) {
+		coord_x = 64;
+		coord_y = 14;
+	}
+	else {
+		coord_x = 12;
+		coord_y = 25;
+	}
+
+	// clear system
+	system("cls");
+	// draw area
+	drawMushroomKingdom(coord_x, coord_y);
+
+	bool endArea = false;
+	while (endArea == false) {
+		int input = 0;
+
+		switch (input = getch()) {
+		case KEY_UP:
+			// update
+			if (boundaryMushroomKingdom(coord_x, coord_y - 1) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_y -= 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		case KEY_DOWN:
+			// update
+			if (boundaryMushroomKingdom(coord_x, coord_y + 1) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_y += 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		case KEY_LEFT:
+			// update
+			if (boundaryMushroomKingdom(coord_x - 1, coord_y) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_x -= 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		case KEY_RIGHT:
+			// update
+			if (boundaryMushroomKingdom(coord_x + 1, coord_y) == false) {
+				setCursorPosition(coord_x, coord_y);
+				std::cout << ' ';
+				coord_x += 1;
+				setCursorPosition(coord_x, coord_y);
+				std::cout << 'M';
+			}
+
+			// break switch statement
+			break;
+		}
+		if (coord_x > 10 && coord_x < 15 && coord_y == 26) {
+			areaState = 7;
+			break;
+		}
 	}
 }
 
@@ -601,6 +721,10 @@ void Game::displayGame()
 		case 6:
 		case 7:
 			displayMushroomWayC(areaState);
+			break;
+		case 8:
+		case 9:
+			displayMushroomKingdom(areaState);
 			break;
 		}
 	}
