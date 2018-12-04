@@ -2,7 +2,7 @@
 100704214
 Combat*/
 
-#include<iostream>
+/*#include<iostream>
 #include<ctime>
 #include<stdlib.h>
 #include<time.h>
@@ -435,4 +435,4 @@ void battle()
 
 
 	system("pause");
-}
+}*/

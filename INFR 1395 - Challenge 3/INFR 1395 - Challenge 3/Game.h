@@ -29,9 +29,6 @@ class Game
 {
 public:
 	void initializeGame();
-	
-	/* Battle */
-	void displayBattle();
 
 	/* Mushroom Way A */
 	bool boundaryMariosPad(int, int);
@@ -63,7 +60,12 @@ public:
 	void drawBanditsWay(int, int);
 	void displayBanditsWay(int&);
 
+	/* Game */
 	void displayGame();
+
+	/* Battle */
+	void drawBattle();
+	void displayBattle();
 
 	/*********************************/
 	/* SET CHARACTER STATE INFO */
@@ -199,6 +201,19 @@ public:
 		_char.ascii[6] = "  |!!__.\'/ (_\\    ";
 		_char.ascii[7] = "  \\___.\'___(__)   ";
 		_char.ascii[8] = "  {__/ {___/      ";
+	}
+
+	void setBlankASCII(_CharacterStateInfo& _char)
+	{
+		_char.ascii[0] = "                  ";
+		_char.ascii[1] = "                  ";
+		_char.ascii[2] = "                  ";
+		_char.ascii[3] = "                  ";
+		_char.ascii[4] = "                  ";
+		_char.ascii[5] = "                  ";
+		_char.ascii[6] = "                  ";
+		_char.ascii[7] = "                  ";
+		_char.ascii[8] = "                  ";
 	}
 
 	/*********************************/

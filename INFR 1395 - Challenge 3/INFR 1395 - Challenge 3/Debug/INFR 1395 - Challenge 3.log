@@ -1,1 +1,18 @@
-﻿  INFR 1395 - Challenge 3.vcxproj -> C:\Users\100704214\Documents\repos\NNN_Omen-Challenge3\INFR 1395 - Challenge 3\Debug\INFR 1395 - Challenge 3.exe
+﻿  Game.cpp
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.h(21): warning C4091: 'typedef ': ignored on left of '_CharacterStateInfo' when no variable is declared
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.h(26): warning C4091: 'typedef ': ignored on left of '_InventoryInfo' when no variable is declared
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.cpp(116): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.cpp(242): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.cpp(390): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.cpp(541): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.cpp(682): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.cpp(798): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\100709845\documents\gitkraken\repos\nnn_omen-challenge3\infr 1395 - challenge 3\infr 1395 - challenge 3\game.cpp(1355): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  INFR 1395 - Challenge 3.vcxproj -> C:\Users\100709845\Documents\GitKraken\Repos\NNN_Omen-Challenge3\INFR 1395 - Challenge 3\Debug\INFR 1395 - Challenge 3.exe
+  INFR 1395 - Challenge 3.vcxproj -> C:\Users\100709845\Documents\GitKraken\Repos\NNN_Omen-Challenge3\INFR 1395 - Challenge 3\Debug\INFR 1395 - Challenge 3.pdb (Partial PDB)
